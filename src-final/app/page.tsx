@@ -1,14 +1,15 @@
-import SignOutButton from "@/components/SignOutButton";
+import { getUser } from "../auth/server";
+import SignOutButton from "../components/SignOutButton";
 import Link from "next/link";
 
 async function HomePage() {
-  const user = null;
+  const user = await getUser();
 
   return (
     <>
       {user ? (
         <div className="flex flex-col items-center gap-4">
-          <p>User is logged in as</p>
+          <p>User is logged in as {user.email}</p>
 
           <SignOutButton />
         </div>
