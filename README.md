@@ -1,4 +1,4 @@
-# Supabase Tutorial
+# Supabase Auth Tutorial
 
 Helpful docs:
 
